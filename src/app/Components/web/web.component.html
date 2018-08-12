@@ -1,0 +1,42 @@
+<p>
+    Web works! {{webObjInput.Id}}
+</p>
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="description">Description:</label>
+        </div>
+        <div class="col-md-4">
+                <input type="text" class="form-control" name="description" value="{{webObjInput.Description}}" id="description" [(ngModel)]="webObjInput.Description"> 
+        </div>
+        </div>
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="url">Url:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="Url" [(ngModel)]="webObjInput.Url" value="{{webObjInput.Url}}" id="url"> </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="expect">Expect:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="Expect" id="expect" [(ngModel)]="webObjInput.Expect" value="{{webObjInput.Expect}}">
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="action">Action:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="Action" id="action" [(ngModel)]="webObjInput.Action" value="{{webObjInput.Action}}">
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <input class="btn btn-primary" type="button" value="Save" (click)="saveDetails()">
+        </div>
+    </div>
+</div>

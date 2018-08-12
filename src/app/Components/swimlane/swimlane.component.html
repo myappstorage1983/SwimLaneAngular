@@ -1,0 +1,53 @@
+<p>
+  swimlane works!
+</p>
+<div> 
+  <div class="row">
+    <div class="col-md-1"><input class="btn btn-primary" type="button" value="New Step" id="irow" (click)="addRow()"></div>
+    <div class="col-md-2">
+        <div class="form-group">           
+            <select class="form-control" id="sel1" #t (change)="change(t.value)" >
+                <option value="0">New Lane</option>
+                <option *ngFor="let lane of lanes" [value]="lane.name">
+                    {{lane.name}}
+                </option>
+            </select>
+          </div>
+    </div>
+    <div class="col-md-8"></div>
+  </div>
+  <hr>
+</div>
+<div>
+  <div class="row">
+    <div class="column left" style="border-right:1px solid black;" >    
+      <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <td *ngFor="let field of columnArray"><p *ngIf="columnArray.length > 1">{{field}}</p></td>
+
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let rowf of rowArray; let r = index" style="line-height: 25px;" >
+                  <td *ngFor="let colf of columnArray; let c = index"(click)="selectCell(this,r,c,colf)" id="{{r}}{{c}}" >                   
+                    <div *ngIf="colf === 'Nr'; else otherRows;">
+                      <p>{{r}}</p>
+                    </div>
+                    <ng-template #otherRows>     
+                        {{selectedCell.Value}}          
+                    </ng-template>
+                  </td>
+                </tr>        
+          </tbody>
+        </table>  
+    </div>
+    <div class="column right">
+      <div *ngIf="displayEmailComponent"><app-email [emailObjInput]="email"></app-email></div>
+      <div *ngIf="displaySMSComponent"><app-sms  [smsObjInput]="sms"></app-sms> </div>
+      <div *ngIf="displayWebComponent"><app-web [webObjInput]="web"></app-web> </div>
+      <div *ngIf="displayVoiceComponent"><app-voice  [voiceObjInput]="voice"></app-voice> </div>
+    </div>
+  </div>
+</div>
+

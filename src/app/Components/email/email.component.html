@@ -1,0 +1,43 @@
+<p>
+  Emai works! {{emailObjInput.Id}}
+</p>
+<div>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="description">Description:</label>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" name="description" value="{{emailObjInput.Description}}" id="description" [(ngModel)]="emailObjInput.Description"> </div>
+  </div>
+
+  <div class="row top-buffer">
+    <div class="col-md-4">
+      <label for="email">Email:</label>
+    </div>
+    <div class="col-md-4">
+      <input type="email" class="form-control" name="email" [(ngModel)]="emailObjInput.EmailAddress" value="{{emailObjInput.EmailAddress}}"
+        id="email"> </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-4">
+      <label for="subject">Subject:</label>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" name="subject" id="subject" [(ngModel)]="emailObjInput.Subject" value="{{emailObjInput.Subject}}">
+    </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-4">
+      <label for="body">Body:</label>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" name="body" id="body" [(ngModel)]="emailObjInput.Body" value="{{emailObjInput.Body}}">
+    </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <input class="btn btn-primary" type="button" value="Save" (click)="saveDetails()">
+    </div>
+  </div>
+</div>

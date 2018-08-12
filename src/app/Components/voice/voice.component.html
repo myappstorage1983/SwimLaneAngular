@@ -1,0 +1,43 @@
+<p>
+    Voice works! {{voiceObjInput.Id}}
+</p>
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="description">Description:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="description" value="{{voiceObjInput.Description}}" id="description" [(ngModel)]="voiceObjInput.Description"> </div>
+    </div>
+
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="email">Phone Number:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="phonenumber" class="form-control" name="phonenumber" [(ngModel)]="voiceObjInput.PhoneNumber" value="{{voiceObjInput.PhoneNumber}}"
+                id="phonenumber"> </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="expect">Expect:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="expect" id="expect" [(ngModel)]="voiceObjInput.Expect" value="{{voiceObjInput.Expect}}">
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <label for="reply">Reply:</label>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" name="reply" id="reply" [(ngModel)]="voiceObjInput.Reply" value="{{voiceObjInput.Reply}}">
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <input class="btn btn-primary" type="button" value="Save" (click)="saveDetails()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<p>
+    Sms works! {{smsObjInput.id}}
+</p>
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="description">Description:</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="description" value="{{smsObjInput.Description}}" id="description" [(ngModel)]="smsObjInput.Description"> </div>
+        </div>
+      
+        <div class="row top-buffer">
+          <div class="col-md-4">
+            <label for="phonenumber">Phone Number:</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="phonenumber" [(ngModel)]="smsObjInput.phonenumber" value="{{smsObjInput.phonenumber}}"
+              id="phonenumber"> </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-md-4">
+            <label for="expect">Expect:</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="expect" id="expect" [(ngModel)]="smsObjInput.expect" value="{{smsObjInput.expect}}">
+          </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-md-4">
+            <label for="body">Reply:</label>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="reply" id="reply" [(ngModel)]="smsObjInput.reply" value="{{smsObjInput.reply}}">
+          </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <input class="btn btn-primary" type="button" value="Save" (click)="saveDetails()">
+          </div>
+        </div>
+      </div>
